@@ -6,7 +6,7 @@ from datetime import datetime
 from itertools import count
 from urllib.request import Request, urlopen
 
-import pandas as pd
+# import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
@@ -38,8 +38,8 @@ def crawling_pelicana():
             results.append((name, address) + tuple(sidogu))
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
-    table.to_csv('__results__/pelicana.csv', encoding='utf-8', mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
+    # table.to_csv('__results__/pelicana.csv', encoding='utf-8', mode='w', index=True)
 
     for t in results:
         print(t)
@@ -79,8 +79,8 @@ def crawling_nene():
             results.append((name, address) + tuple(sidogu))
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
-    table.to_csv('/root/crawling-results/nene.csv', encoding='utf-8', mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
+    # table.to_csv('/root/crawling-results/nene.csv', encoding='utf-8', mode='w', index=True)
 
     for t in results:
         print(t)
@@ -114,8 +114,8 @@ def crawling_kyochon():
         print(t)
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
-    table.to_csv('__results__/kyochon.csv', encoding='utf-8', mode='w', index=True)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gugun'])
+    # table.to_csv('__results__/kyochon.csv', encoding='utf-8', mode='w', index=True)
 
 
 def crawling_goobne():
